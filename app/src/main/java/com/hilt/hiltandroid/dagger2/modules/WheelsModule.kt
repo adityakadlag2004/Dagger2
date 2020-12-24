@@ -1,10 +1,10 @@
-package com.hilt.hiltandroid.dagger.modules.modules
+package com.hilt.hiltandroid.dagger2.modules
 
 import android.content.ContentValues.TAG
 import android.util.Log
-import com.hilt.hiltandroid.dagger.modules.car.Rims
-import com.hilt.hiltandroid.dagger.modules.car.Tyres
-import com.hilt.hiltandroid.dagger.modules.car.Wheels
+import com.hilt.hiltandroid.dagger2.car.Rims
+import com.hilt.hiltandroid.dagger2.car.Tyres
+import com.hilt.hiltandroid.dagger2.car.Wheels
 import dagger.Module
 import dagger.Provides
 

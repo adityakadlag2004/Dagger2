@@ -1,7 +1,7 @@
-package com.hilt.hiltandroid.dagger.modules.modules
+package com.hilt.hiltandroid.dagger2.modules
 
-import com.hilt.hiltandroid.dagger.modules.engine.DieselEngine
-import com.hilt.hiltandroid.dagger.modules.engine.Engine
+import com.hilt.hiltandroid.dagger2.engine.DieselEngine
+import com.hilt.hiltandroid.dagger2.engine.Engine
 import dagger.Module
 import dagger.Provides
 

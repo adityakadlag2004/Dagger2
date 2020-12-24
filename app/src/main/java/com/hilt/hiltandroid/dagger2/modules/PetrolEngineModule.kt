@@ -1,7 +1,7 @@
-package com.hilt.hiltandroid.dagger.modules.modules
+package com.hilt.hiltandroid.dagger2.modules
 
-import com.hilt.hiltandroid.dagger.modules.engine.Engine
-import com.hilt.hiltandroid.dagger.modules.engine.PetrolEngine
+import com.hilt.hiltandroid.dagger2.engine.Engine
+import com.hilt.hiltandroid.dagger2.engine.PetrolEngine
 import dagger.Binds
 import dagger.Module
 

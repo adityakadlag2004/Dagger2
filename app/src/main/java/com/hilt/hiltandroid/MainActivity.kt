@@ -2,8 +2,8 @@ package com.hilt.hiltandroid
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.hilt.hiltandroid.dagger.modules.car.Car
-import com.hilt.hiltandroid.dagger.modules.components.DaggerCarComponent
+import com.hilt.hiltandroid.dagger2.car.Car
+import com.hilt.hiltandroid.dagger2.components.DaggerCarComponent
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
