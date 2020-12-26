@@ -3,7 +3,7 @@ package com.hilt.hiltandroid
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.hilt.hiltandroid.dagger2.car.Car
-import com.hilt.hiltandroid.dagger2.components.DaggerActivityComponent
+import com.hilt.hiltandroid.dagger2.modules.DieselEngineModule
 import com.hilt.hiltandroid.dagger2.modules.MyApplication
 import javax.inject.Inject
 
@@ -17,13 +17,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val ActivityComponent = DaggerActivityComponent.builder()
-            .capacity(321)
-            ?.horsePower(3123)
-            ?.appComponent((application as MyApplication).getAppComponent())
-            ?.build()
+        val ActivityComponent = (application as MyApplication).getActivityComponent2()
+            .getActivityComponent(DieselEngineModule(243))
 
-        ActivityComponent?.inject(this)
+        ActivityComponent.inject(this)
 
         car1.drive()
         car2.drive()

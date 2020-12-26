@@ -13,7 +13,7 @@ class MyApplication : Application() {
 
     }
 
-    fun getAppComponent(): AppComponent {
+    fun getActivityComponent2(): AppComponent {
         return activityComponent
     }
 }
