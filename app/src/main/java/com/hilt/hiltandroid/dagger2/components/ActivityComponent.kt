@@ -18,7 +18,8 @@ import javax.inject.Named
 interface ActivityComponent {
     val car: Car?
 
-    fun inject(mainActivity: MainActivity?)
+    fun inject(mainActivity: MainActivity?): Unit
+
 
     @Component.Builder
     interface Builder {
@@ -27,7 +28,11 @@ interface ActivityComponent {
 
         @BindsInstance
         fun capacity(@Named("capacity") engineCapacity: Int): Builder?
+
         fun appComponent(component: AppComponent?): Builder?
+
         fun build(): ActivityComponent?
+
+
     }
 }

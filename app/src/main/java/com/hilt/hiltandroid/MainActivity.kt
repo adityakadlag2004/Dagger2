@@ -17,14 +17,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val carComponent = DaggerActivityComponent.builder()
+        val ActivityComponent = DaggerActivityComponent.builder()
             .capacity(321)
             ?.horsePower(3123)
             ?.appComponent((application as MyApplication).getAppComponent())
+            ?.build()
 
-       // carComponent.inject(this)
-//        car1.drive()
-//        car2.drive()
+        ActivityComponent?.inject(this)
+
+        car1.drive()
+        car2.drive()
     }
 }
 
