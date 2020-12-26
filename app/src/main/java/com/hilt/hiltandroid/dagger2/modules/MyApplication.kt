@@ -6,14 +6,14 @@ import com.hilt.hiltandroid.dagger2.components.DaggerAppComponent
 
 class MyApplication : Application() {
 
-    lateinit var activityComponent: AppComponent
+    lateinit var appComponent: AppComponent
     override fun onCreate() {
         super.onCreate()
-        activityComponent=DaggerAppComponent.create()
+        appComponent=DaggerAppComponent.create()
 
     }
 
-    fun getActivityComponent2(): AppComponent {
-        return activityComponent
+    fun getAppComponentApp(): AppComponent {
+        return appComponent
     }
 }

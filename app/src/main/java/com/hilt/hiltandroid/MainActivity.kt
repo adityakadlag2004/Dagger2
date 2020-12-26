@@ -17,10 +17,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val ActivityComponent = (application as MyApplication).getActivityComponent2()
+        val appcomponent = (application as MyApplication).getAppComponentApp()
             .getActivityComponent(DieselEngineModule(243))
 
-        ActivityComponent.inject(this)
+        appcomponent.inject(this)
 
         car1.drive()
         car2.drive()
