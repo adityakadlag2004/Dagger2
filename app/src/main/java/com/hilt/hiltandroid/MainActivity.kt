@@ -3,7 +3,6 @@ package com.hilt.hiltandroid
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.hilt.hiltandroid.dagger2.car.Car
-import com.hilt.hiltandroid.dagger2.modules.DieselEngineModule
 import com.hilt.hiltandroid.dagger2.modules.MyApplication
 import javax.inject.Inject
 
@@ -18,10 +17,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val appcomponent = (application as MyApplication).getAppComponentApp()
-            .getActivityComponentBuilder()
-            .capacity(3243)
-            ?.horsePower(4324)
-            ?.build()
+            .getActivityComponentFactory()
+            .create(231, 4532)
+
 
         appcomponent?.inject(this)
 
